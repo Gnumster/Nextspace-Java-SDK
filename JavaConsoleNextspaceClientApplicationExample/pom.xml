@@ -11,6 +11,26 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <exec.mainClass>org.nextspace.javaconsolenextspaceclientapplicationexample.JavaConsoleNextspaceClientApplicationExample</exec.mainClass>
     </properties>
+    
+    <repositories>
+        <repository>
+            <id>Central</id>
+            <name>Central Maven Repository</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.nextspace</groupId>
+            <artifactId>NextspaceClient</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+    </dependencies>    
+    
     <build>
         <plugins>
             <plugin>
