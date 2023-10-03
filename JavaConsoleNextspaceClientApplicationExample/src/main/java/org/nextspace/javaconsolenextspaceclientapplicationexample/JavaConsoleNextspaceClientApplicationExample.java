@@ -2,7 +2,6 @@ package org.nextspace.javaconsolenextspaceclientapplicationexample;
 
 import com.Nextspace.Client;
 import com.Nextspace.Data.EntityType;
-import com.Nextspace.Infrastructure.NextspaceHostingEnvironment;
 import java.util.List;
 
 /**
@@ -30,6 +29,9 @@ public class JavaConsoleNextspaceClientApplicationExample
              *  - User Login 
              *  - User Password (not saved anywhere in the code)
              *
+             *  For this SDK trials and test runs we have set up Client Accout with ID = "sdk",
+             *  and a User with login "sdkuser" and password "password".
+             *
              *  User Login and Password are optional. If no login and password is supplied,
              *  Client() is initialized to act on behalf of Anonymous user, which will
              *  have limited Access Permission. Some of the calls made using this option
@@ -38,11 +40,7 @@ public class JavaConsoleNextspaceClientApplicationExample
              * =============================================================================
              */
             
-            Client client = new Client(NextspaceHostingEnvironment.PROD, "alex", null, null);
-            
-            String bruceAPIURL = client.getBruceAPIURL();
-        
-            System.out.println(">Bruce API URL : " + bruceAPIURL);
+            Client client = Login.Login("sdk", "sdkuser", "password");
             
             /*
              * =============================================================================
